@@ -1,0 +1,81 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 (<code object cube_of_natural_number at 0x0000023E652FF1B0, file "natural_number_cubes.py", line 1>)
+              4 MAKE_FUNCTION            0
+              6 STORE_NAME               0 (cube_of_natural_number)
+
+ 11           8 LOAD_CONST               1 (<code object main at 0x0000023E65347770, file "natural_number_cubes.py", line 11>)
+             10 MAKE_FUNCTION            0
+             12 STORE_NAME               1 (main)
+
+ 15          14 LOAD_NAME                2 (__name__)
+             16 LOAD_CONST               2 ('__main__')
+             18 COMPARE_OP              40 (==)
+             22 POP_JUMP_IF_FALSE        8 (to 40)
+
+ 16          24 PUSH_NULL
+             26 LOAD_NAME                1 (main)
+             28 CALL                     0
+             36 POP_TOP
+             38 RETURN_CONST             3 (None)
+
+ 15     >>   40 RETURN_CONST             3 (None)
+
+Disassembly of <code object cube_of_natural_number at 0x0000023E652FF1B0, file "natural_number_cubes.py", line 1>:
+  1           0 RESUME                   0
+
+  2           2 NOP
+
+  3           4 LOAD_GLOBAL              1 (NULL + int)
+             14 LOAD_FAST                0 (value)
+             16 CALL                     1
+             24 STORE_FAST               1 (num)
+
+  4          26 LOAD_FAST                1 (num)
+             28 LOAD_CONST               1 (0)
+             30 COMPARE_OP              68 (>)
+             34 POP_JUMP_IF_FALSE        5 (to 46)
+
+  5          36 LOAD_FAST                1 (num)
+             38 LOAD_CONST               2 (3)
+             40 BINARY_OP                8 (**)
+             44 RETURN_VALUE
+
+  7     >>   46 RETURN_CONST             3 ('undefined. Not a natural number')
+        >>   48 PUSH_EXC_INFO
+
+  8          50 LOAD_GLOBAL              2 (ValueError)
+             60 LOAD_GLOBAL              4 (TypeError)
+             70 BUILD_TUPLE              2
+             72 CHECK_EXC_MATCH
+             74 POP_JUMP_IF_FALSE        3 (to 82)
+             76 POP_TOP
+
+  9          78 POP_EXCEPT
+             80 RETURN_CONST             3 ('undefined. Not a natural number')
+
+  8     >>   82 RERAISE                  0
+        >>   84 COPY                     3
+             86 POP_EXCEPT
+             88 RERAISE                  1
+ExceptionTable:
+  4 to 42 -> 48 [0]
+  48 to 76 -> 84 [1] lasti
+  82 to 82 -> 84 [1] lasti
+
+Disassembly of <code object main at 0x0000023E65347770, file "natural_number_cubes.py", line 11>:
+ 11           0 RESUME                   0
+
+ 12           2 LOAD_GLOBAL              1 (NULL + input)
+             12 LOAD_CONST               1 ('Write down natural number: ')
+             14 CALL                     1
+             22 STORE_FAST               0 (input_value)
+
+ 13          24 LOAD_GLOBAL              3 (NULL + print)
+             34 LOAD_CONST               2 ('Cube of this number:')
+             36 LOAD_GLOBAL              5 (NULL + cube_of_natural_number)
+             46 LOAD_FAST                0 (input_value)
+             48 CALL                     1
+             56 CALL                     2
+             64 POP_TOP
+             66 RETURN_CONST             0 (None)
