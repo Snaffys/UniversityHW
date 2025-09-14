@@ -141,6 +141,9 @@ dkms.conf
 # Visual Studio & Visual Studio Code
 # ==============================================
 
+# Visual Studio folder
+.vs/
+
 # Visual Studio Code
 .vscode/
 !.vscode/settings.json
