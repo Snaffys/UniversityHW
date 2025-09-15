@@ -1,6 +1,6 @@
 def reverse_string_comparison(str1, str2):
     if(str1 == str2):
-        print("strings are equal")
+        print(str1, "=", str2)
         return
 
     min_len = min(len(str1), len(str2))
