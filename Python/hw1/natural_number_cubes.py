@@ -1,7 +1,7 @@
 def cube_of_natural_number(value):
     try:
         num = int(value)
-        if(num > 0):
+        if(num.is_integer() and num > 0):
             return num ** 3
         else:
             return "undefined. Not a natural number"

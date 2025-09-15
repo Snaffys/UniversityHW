@@ -1,10 +1,10 @@
   0           0 RESUME                   0
 
-  1           2 LOAD_CONST               0 (<code object cube_of_natural_number at 0x0000023E652FF1B0, file "natural_number_cubes.py", line 1>)
+  1           2 LOAD_CONST               0 (<code object cube_of_natural_number at 0x0000029571299A70, file "natural_number_cubes.py", line 1>)
               4 MAKE_FUNCTION            0
               6 STORE_NAME               0 (cube_of_natural_number)
 
- 11           8 LOAD_CONST               1 (<code object main at 0x0000023E65347770, file "natural_number_cubes.py", line 11>)
+ 11           8 LOAD_CONST               1 (<code object main at 0x00000295712D7770, file "natural_number_cubes.py", line 11>)
              10 MAKE_FUNCTION            0
              12 STORE_NAME               1 (main)
 
@@ -21,7 +21,7 @@
 
  15     >>   40 RETURN_CONST             3 (None)
 
-Disassembly of <code object cube_of_natural_number at 0x0000023E652FF1B0, file "natural_number_cubes.py", line 1>:
+Disassembly of <code object cube_of_natural_number at 0x0000029571299A70, file "natural_number_cubes.py", line 1>:
   1           0 RESUME                   0
 
   2           2 NOP
@@ -32,38 +32,42 @@ Disassembly of <code object cube_of_natural_number at 0x0000023E652FF1B0, file "
              24 STORE_FAST               1 (num)
 
   4          26 LOAD_FAST                1 (num)
-             28 LOAD_CONST               1 (0)
-             30 COMPARE_OP              68 (>)
-             34 POP_JUMP_IF_FALSE        5 (to 46)
+             28 LOAD_ATTR                3 (NULL|self + is_integer)
+             48 CALL                     0
+             56 POP_JUMP_IF_FALSE       10 (to 78)
+             58 LOAD_FAST                1 (num)
+             60 LOAD_CONST               1 (0)
+             62 COMPARE_OP              68 (>)
+             66 POP_JUMP_IF_FALSE        5 (to 78)
 
-  5          36 LOAD_FAST                1 (num)
-             38 LOAD_CONST               2 (3)
-             40 BINARY_OP                8 (**)
-             44 RETURN_VALUE
+  5          68 LOAD_FAST                1 (num)
+             70 LOAD_CONST               2 (3)
+             72 BINARY_OP                8 (**)
+             76 RETURN_VALUE
 
-  7     >>   46 RETURN_CONST             3 ('undefined. Not a natural number')
-        >>   48 PUSH_EXC_INFO
+  7     >>   78 RETURN_CONST             3 ('undefined. Not a natural number')
+        >>   80 PUSH_EXC_INFO
 
-  8          50 LOAD_GLOBAL              2 (ValueError)
-             60 LOAD_GLOBAL              4 (TypeError)
-             70 BUILD_TUPLE              2
-             72 CHECK_EXC_MATCH
-             74 POP_JUMP_IF_FALSE        3 (to 82)
-             76 POP_TOP
+  8          82 LOAD_GLOBAL              4 (ValueError)
+             92 LOAD_GLOBAL              6 (TypeError)
+            102 BUILD_TUPLE              2
+            104 CHECK_EXC_MATCH
+            106 POP_JUMP_IF_FALSE        3 (to 114)
+            108 POP_TOP
 
-  9          78 POP_EXCEPT
-             80 RETURN_CONST             3 ('undefined. Not a natural number')
+  9         110 POP_EXCEPT
+            112 RETURN_CONST             3 ('undefined. Not a natural number')
 
-  8     >>   82 RERAISE                  0
-        >>   84 COPY                     3
-             86 POP_EXCEPT
-             88 RERAISE                  1
+  8     >>  114 RERAISE                  0
+        >>  116 COPY                     3
+            118 POP_EXCEPT
+            120 RERAISE                  1
 ExceptionTable:
-  4 to 42 -> 48 [0]
-  48 to 76 -> 84 [1] lasti
-  82 to 82 -> 84 [1] lasti
+  4 to 74 -> 80 [0]
+  80 to 108 -> 116 [1] lasti
+  114 to 114 -> 116 [1] lasti
 
-Disassembly of <code object main at 0x0000023E65347770, file "natural_number_cubes.py", line 11>:
+Disassembly of <code object main at 0x00000295712D7770, file "natural_number_cubes.py", line 11>:
  11           0 RESUME                   0
 
  12           2 LOAD_GLOBAL              1 (NULL + input)
